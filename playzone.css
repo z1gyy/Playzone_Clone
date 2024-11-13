@@ -63,7 +63,7 @@ body {
 }
 
 .main-nav a:hover {
-    color: #ccc;
+    color: #ccc;    
 }
 
 .auth-buttons {
@@ -122,42 +122,72 @@ body {
     max-width: 1200px;
 }
 
-/* Hlavní článek */
+/* Zachování původních velikostí a pozic obrázků v sekci novinek */
 .news-section {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 20px;
-    margin: 20px auto;
+    margin: 20px 30px;
     max-width: 1200px;
 }
 
-/* Hlavní článek vlevo */
+/* Hlavní článek vlevo s nezměněnými velikostmi */
 .news-article-main {
     grid-column: 1 / 2;
-    height: 100%;
+    height: 420px;
+    width: 900px;
     position: relative;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .news-article-main img {
-    width: 100%;
     height: 100%;
+    width: 100%;
     object-fit: cover;
-    border-radius: 10px;
     filter: brightness(0.7);
+    border-radius: 10px;
 }
 
-/* Menší články uprostřed */
+.news-article-main .content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+.news-article-main .tag {
+    background-color: red;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.news-article-main h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.news-article-main p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Menší články uprostřed s nezměněnými velikostmi */
 .news-article-small-column {
-    display: flex;  
+    display: flex;
     flex-direction: column;
     gap: 20px;
     grid-column: 2 / 3;
 }
 
 .news-article-small-column .news-article {
-    display: flex;
     position: relative;
-    height: 180px;
+    height: 200px; /* Zachování původní výšky */
+    width: 430px;  /* Zachování původní šířky */
     background-color: #222;
     border-radius: 10px;
     overflow: hidden;
@@ -175,9 +205,29 @@ body {
 }
 
 .news-article-small-column .news-article .content {
-    position: relative;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
     z-index: 2;
-    padding: 10px;
+}
+
+.news-article-small-column .news-article .tag {
+    font-size: 12px;
+    background-color: red;
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.news-article-small-column .news-article h3 {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.news-article-small-column .news-article p {
+    font-size: 12px;
+    color: #ccc;
 }
 
 /* Sekce Zápasovník v pravém sloupci */
@@ -185,6 +235,11 @@ body {
     grid-column: 3 / 4;
     background-color: #222;
     padding: 15px;
+    position: absolute;    
+    left: 1420px;
+    bottom: 395px;
+    width: 420px;
+    height: 420px;
     border-radius: 10px;
 }
 
@@ -217,17 +272,22 @@ body {
     color: #ccc;
     font-size: 14px;
 }
+
 /* Sekce Další články */
+
 .dalsi-clanky-container {
-    background-color: #222;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 2fr 1fr;
+    background-color: #000000;
     padding: 20px;
-    margin: 20px auto;
+    margin: 25px auto;
     max-width: 1200px;
     border-radius: 8px;
 }
 
 .dalsi-clanky-header {
-    display: flex;
+    display: fixed;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
@@ -245,6 +305,8 @@ body {
 }
 
 .dalsi-clanky {
+    grid-column: 1 / 2;
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -279,4 +341,165 @@ body {
     font-size: 14px;
     color: #ccc;
     margin: 2px 0;
+}
+
+.schedule-section2 {
+    grid-column: 2 / 3;
+    flex: 1;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.ad-background {
+    background-image: url(background.png);
+    padding: 40px 0;
+}
+
+/*Tournaments*/
+
+.container {
+    max-width: 400px;
+    margin: auto;
+}
+.header {
+    background-color: #b982ff;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header .icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.header .icon img {
+    width: 100%;
+    height: auto;
+}
+.header .info {
+    font-size: 0.9em;
+}
+.header .info h4 {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.tournament-list {
+    list-style-type: none;  
+}
+.tournament {
+    background-color: white;
+    height: 111px;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+.tournament .icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+.tournament .icon img {
+    width: 100%;
+    height: auto;
+}
+.tournament .info {
+    flex-grow: 1;
+}
+.tournament .info h4 {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+.tournament .info p {
+    font-size: 0.85em;
+    color: #777;
+}
+.tournament .status {
+    font-size: 0.85em;
+    color: white;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.ad-image {
+    text-align: center;
+    margin-top: 20px;
+    position: "relative";
+    /*Z nějakého záhadného důvodu to stačí :-)*/
+    width: 20px;
+}
+
+/*dalsi clanky2*/
+.dalsi-clanky-container2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: #222;
+    padding: 20px;
+    margin: 25px auto;
+    max-width: 1200px;
+}
+
+
+/*footer*/
+.footer {
+    background-color: #0f0f0f;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+.footer .links div {
+    display: inline-block;
+    margin: 0 15px;
+}
+.footer .links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+.footer .links a:hover {
+    color: #fff;
+}
+.footer .socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.footer .socials a {
+    font-size: 20px;
+    color: #ccc;
+    text-decoration: none;
+}
+.footer .socials a:hover {
+    color: #fff;
+}
+.footer .copyright {
+    font-size: 12px;
+    color: #777;
 }
