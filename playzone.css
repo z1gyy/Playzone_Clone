@@ -123,91 +123,81 @@ body {
 }
 
 /* Hlavní článek */
+.news-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Hlavní článek vlevo */
 .news-article-main {
     grid-column: 1 / 2;
-    height: 400px;
+    height: 100%;
+    position: relative;
 }
 
-.news-article {
+.news-article-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(0.7);
+}
+
+/* Menší články uprostřed */
+.news-article-small-column {
+    display: flex;  
+    flex-direction: column;
+    gap: 20px;
+    grid-column: 2 / 3;
+}
+
+.news-article-small-column .news-article {
+    display: flex;
     position: relative;
+    height: 180px;
     background-color: #222;
-    color: white;
     border-radius: 10px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
 }
 
-.news-article img {
+.news-article-small-column .news-article img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
     filter: brightness(0.7);
+    border-radius: 10px;
 }
 
-.news-article .content {
+.news-article-small-column .news-article .content {
     position: relative;
     z-index: 2;
-    padding: 20px;
-}
-
-.news-article .content .tag {
-    display: inline-block;
-    background-color: #0066ff;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 12px;
-    margin-bottom: 10px;
-}
-
-.news-article .content h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.news-article .content p {
-    font-size: 14px;
-    color: #ccc;
-}
-
-/* Menší články v pravém sloupci */
-.news-article-small {
-    grid-column: 2 / 3;
-    display: grid;
-    gap: 20px;
-}
-
-.news-article-small .news-article {
-    height: 200px;
+    padding: 10px;
 }
 
 /* Sekce Zápasovník v pravém sloupci */
-.match-section {
+.schedule-section {
+    grid-column: 3 / 4;
     background-color: #222;
+    padding: 15px;
     border-radius: 10px;
-    overflow: hidden;
-    grid-column: 2 / 3;
 }
 
-.match-section h2 {
+.schedule-section h2 {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
     font-size: 18px;
+    border-radius: 5px;
 }
 
-.match-list {
-    padding: 15px;
-}
-
-.match {
+.match-list .match-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -215,26 +205,18 @@ body {
     border-bottom: 1px solid #333;
 }
 
-.match:last-child {
+.match-list .match-item:last-child {
     border-bottom: none;
 }
 
-.match .team-logos img {
-    height: 20px;
-    width: auto;
-    margin-right: 5px;
+.match-item .team {
+    color: white;
 }
 
-.match .teams {
-    display: flex;
-    align-items: center;
-}
-
-.match .time {
+.match-item .time {
     color: #ccc;
     font-size: 14px;
 }
-
 /* Sekce Další články */
 .dalsi-clanky-container {
     background-color: #222;
