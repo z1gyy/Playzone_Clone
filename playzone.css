@@ -157,6 +157,9 @@ body {
 }
 
 .news-article-main .tag {
+    position: absolute;
+    top: -330px;  /* Vzdálenost od horního okraje obrázku */
+    right: 10px;
     background-color: red;
     padding: 5px 10px;
     font-size: 12px;
@@ -213,6 +216,9 @@ body {
 }
 
 .news-article-small-column .news-article .tag {
+    position: absolute;
+    top: -120px;  /* Vzdálenost od horního okraje obrázku */
+    right: 10px;
     font-size: 12px;
     background-color: red;
     padding: 5px 8px;
@@ -274,7 +280,6 @@ body {
 }
 
 /* Sekce Další články */
-
 .dalsi-clanky-container {
     display: grid;
     gap: 20px;
@@ -287,10 +292,17 @@ body {
 }
 
 .dalsi-clanky-header {
+    /*
     display: fixed;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
+    */
+    font-size: 24px;
+    color: white;
+    border-left: 5px solid red;
+    padding-left: 10px;
+    margin-bottom: 20px;
 }
 
 .dalsi-clanky-header h2 {
@@ -314,21 +326,41 @@ body {
 
 .article {
     display: flex;
-    align-items: center;
-    background-color: #333;
+    position: relative;
+    /*background-color: #333;*/
     padding: 15px;
     border-radius: 8px;
     gap: 20px;
+
 }
 
-.article img {
-    max-width: 150px;
+.image-container img {
+    width: 280px;
     border-radius: 5px;
 }
+
+.image-container {
+    position: relative; /* Přidáno pro relativní pozicování tagu uvnitř obrázku */
+}
+
+.tag {
+    position: absolute; /* Absolutní pozicování pro umístění na obrázek */
+    top: 10px; /* Posunutí od horního okraje obrázku */
+    right: 10px; /* Posunutí od pravého okraje obrázku */
+    background-color: rgba(0, 0, 0, 0.7); /* Poloprůhledné pozadí pro lepší čitelnost */
+    color: #fff; /* Bílá barva textu */
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 
 .article-text {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
 }
 
 .article-text h3 {
@@ -357,7 +389,6 @@ body {
 }
 
 /*Tournaments*/
-
 .container {
     max-width: 400px;
     margin: auto;
@@ -448,58 +479,204 @@ body {
     width: 20px;
 }
 
-/*dalsi clanky2*/
+/*další články2*/
 .dalsi-clanky-container2 {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    background-color: #222;
-    padding: 20px;
-    margin: 25px auto;
     max-width: 1200px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #333;
+    border-radius: 8px;
+    margin-top: -35px;
+    margin-bottom: -45px;
 }
 
+/* Header styling */
+.dalsi-clanky-container2 .dalsi-clanky-header2 h2 {
+    font-size: 24px;
+    color: white;
+    border-left: 5px solid red;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+/* Main article layout */
+.dalsi-clanky-container2 .main-article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.dalsi-clanky-container2 .main-article img {
+    width: 40%; /* Adjust the width of the YouTube image */
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.dalsi-clanky-container2 .main-article .article-text {
+    flex-grow: 1;
+    color: white;
+}
+
+.dalsi-clanky-container2 .main-article .article-text h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.dalsi-clanky-container2 .main-article .article-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Sub-articles inline */
+.dalsi-clanky-container2 .sub-articles {
+    display: flex;
+    justify-content: space-between; /* Space between articles */
+    gap: 20px; /* Space between items */
+}
+
+.dalsi-clanky-container2 .sub-articles .variant {
+    flex: 1;
+    text-align: center;
+    color: white;
+}
+
+.dalsi-clanky-container2 .sub-articles .variant img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.dalsi-clanky-container2 .sub-articles .variant h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.dalsi-clanky-container2 .sub-articles .variant p {
+    font-size: 14px;
+    line-height: 1.4;
+}
 
 /*footer*/
 .footer {
     background-color: #0f0f0f;
-    padding: 20px 0;
-    text-align: center;
+    color: #ccc;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0px 350px;
 }
-.footer .links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+
+.top-section {
+    display: flex; /* Použijeme flexbox */
+    align-items: center; /* Zarovnání obrázku a textu vertikálně uprostřed */
     margin-bottom: 20px;
+}
+
+.logo2 {
+    text-align: left;
+    margin-right: 20px; /* Vytvoříme mezery mezi obrázkem a odkazy */
+}
+
+.logo2 img {
+    max-width: 150px;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
     color: #ccc;
 }
-.footer .links div {
-    display: inline-block;
+.links div {
     margin: 0 15px;
 }
-.footer .links a {
+
+.links a {
     color: #ccc;
     text-decoration: none;
     font-size: 14px;
 }
-.footer .links a:hover {
+
+.links a:hover {
     color: #fff;
 }
-.footer .socials {
+
+.rozcestnik {
+    display: flex; /* Použijeme flexbox pro rozložení odkazů vedle sebe */
+    justify-content: flex-end; /* Odkazy budou zarovnány doprava */
+    gap: 15px; /* Mezera mezi odkazy */
+    margin-left: 300px;
+}
+
+.rozcestnik a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.rozcestnik a:hover {
+    color: #fff; /* Změna barvy při najetí myší */
+}
+
+.separator {
+    height: 3px;
+    background-color: #e63946; /* Red color */
+    margin: 20px 0;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects {
+    flex: 1;
+    min-width: 200px;
+}
+
+.project-links a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.project-links a:hover {
+    color: #fff;
+}
+
+.socials {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-left: 110px;
 }
-.footer .socials a {
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-icons a {
     font-size: 20px;
     color: #ccc;
     text-decoration: none;
 }
-.footer .socials a:hover {
+
+.social-icons a:hover {
     color: #fff;
 }
-.footer .copyright {
+
+.copyright {
+    text-align: center;
     font-size: 12px;
     color: #777;
+    margin-top: 20px;
 }
