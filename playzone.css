@@ -16,13 +16,14 @@ body {
     display: flex;
     background-color: #111;
     color: white;
+    height: 150px;
 }
 
 .logo {
     width: 150px;
     position: absolute;
-    top: 20px;
-    left: 200px; 
+    top: 30px;
+    left: 100px; 
     transform: translateX(-50%);
     flex-shrink: 0;
 }
@@ -41,12 +42,15 @@ body {
 
 /* Navigace */
 .nav-row {
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #333;
+    margin-left: 500px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     gap: 20px;
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 0px 5px 20px;
 }
 
 .main-nav {
@@ -69,6 +73,7 @@ body {
 .auth-buttons {
     display: flex;
     gap: 10px;
+    margin-left: 790px;
 }
 
 .login-btn, .register-btn {
@@ -97,31 +102,67 @@ body {
     background-color: #e60000;
 }
 
+/* Herní ikony */
+.games-nav {
+    border-left: 1px solid #333;
+    display: flex;
+    padding: 8px 0;
+    justify-content: center;
+    margin-left: 72px;
+}
+
 .games-nav a {
     display: inline-block; /* Ujistěte se, že odkazy obklopí obrázek */ /* Nastaví mezeru mezi obrázky */
     text-decoration: none; /* Skryje podtržení */
 }
 .games-nav img {
+    max-height: 40px;
+    transition: transform 0.3s;
     display: block; /* Zajistí správné zobrazení obrázků */
     width: 100px; /* Nastavte požadovanou šířku */
     height: auto; /* Zachovejte poměry stran obrázku */
 }
 
-/* Herní ikony */
-.games-nav {
-    display: flex;
-    gap: 15px;
-    padding: 10px 0;
-    justify-content: center;
-}
-.games-nav img {
-    max-height: 40px;
-    transition: transform 0.3s;
-}
-
 .games-nav img:hover {
     transform: scale(1.1);
 }
+
+.games-nav .image-container_top {
+    background-color: #2d2d3a; /* Barva pozadí kontejneru */
+    width: 158px;
+    height: 70px;
+    display: inline-block; /* Zajistí, že velikost kontejneru se přizpůsobí obsahu */
+    border-radius: 8px; /* Zakulatí rohy kontejneru, volitelné */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Přidá jemný stín, volitelné */
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.games-nav .image-container_top img {
+    max-height: 100px;
+    width: 150px;
+    margin-left: 5px;
+    margin-top: 2px;
+}   
+
+.games-nav .image-container_top_sipka {
+    background-color: #2d2d3a; /* Barva pozadí kontejneru */
+    width: 60px;
+    height: 70px;
+    display: inline-block; /* Zajistí, že velikost kontejneru se přizpůsobí obsahu */
+    border-radius: 8px; /* Zakulatí rohy kontejneru, volitelné */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Přidá jemný stín, volitelné */
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.games-nav .image-container_top_sipka img {
+    margin-left: 10px;
+    margin-top: 20px;
+    max-height: 30px;
+    width: 40px;
+}  
+
 
 /* Sekce novinek s gridem pro Zápasovník */
 .news-section {
@@ -178,8 +219,21 @@ body {
     border-radius: 3px;
 }
 
+.news-article-main .tag_cs {
+    position: absolute;
+    top: -300px;  /* Vzdálenost od horního okraje obrázku */
+    right: 10px;
+    background-color: orange;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+
 .news-article-main h3 {
-    font-size: 28px;
+    font-size: 30px;
     margin-top: 10px;
     color: #fff;
 }
@@ -236,6 +290,17 @@ body {
     font-weight: bold;
 }
 
+.news-article-small-column .news-article .tag_cs {
+    position: absolute;
+    top: -110px;  /* Vzdálenost od horního okraje obrázku */
+    right: 10px;
+    font-size: 12px;
+    background-color: orange;
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
 .news-article-small-column .news-article h3 {
     font-size: 18px;
     margin-top: 5px;
@@ -254,7 +319,7 @@ body {
     padding: 15px;
     position: absolute;    
     left: 1420px;
-    bottom: 395px;
+    bottom: 350px;
     width: 420px;
     height: 420px;
     border-radius: 10px;
@@ -317,7 +382,6 @@ body {
     padding-left: 10px;
     margin-top: 16px;
 }
-
 
 .dalsi-clanky-header h2 {
     font-size: 24px;
@@ -776,7 +840,7 @@ body {
     max-width: 1200px;
     margin: 20px auto;
     padding: 25px;
-    background-color: #333;
+    background-color: #2d2d3a;
     border-radius: 8px;
     margin-top: -35px;
     margin-bottom: -45px;
@@ -786,7 +850,7 @@ body {
 .dalsi-clanky-container2 .dalsi-clanky-header2 h2 {
     font-size: 24px;
     color: white;
-    border-left: 5px solid red;
+    border-left: 10px solid red;
     padding-left: 10px;
     margin-bottom: 20px;
 }
@@ -800,6 +864,7 @@ body {
 
 .dalsi-clanky-container2 .main-article img {
     width: 40%; /* Adjust the width of the YouTube image */
+    width: 520px;
     margin-right: 20px;
     border-radius: 5px;
 }
@@ -811,39 +876,57 @@ body {
 
 .dalsi-clanky-container2 .main-article .article-text h3 {
     font-size: 20px;
+    color: white;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
+.dalsi-clanky-container2 .main-article .article-text h4 {
+    margin-top: 16px;
+    font-size: 18px;
+    color: gray;
+    margin-bottom: -10px;
+}
+
 .dalsi-clanky-container2 .main-article .article-text p {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 15px;
+    color: #fff;
+    margin: 2px 0;
+    margin-bottom: 20px;
 }
 /* Sub-articles inline */
 .dalsi-clanky-container2 .sub-articles {
     display: flex;
-    justify-content: space-between; /* Space between articles */
     gap: 20px; /* Space between items */
 }
 
 .dalsi-clanky-container2 .sub-articles .variant {
     flex: 1;
-    text-align: center;
+    text-align: left;
     color: white;
 }
 
 .dalsi-clanky-container2 .sub-articles .variant img {
     width: 100%;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: -10px;
 }
 
-.dalsi-clanky-container2 .sub-articles .variant h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    margin-top: -100px;
+.dalsi-clanky-container2 .sub-articles .variant .article-text h4 {
+    margin-top: 15px;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: -340px;
 }
 
-.dalsi-clanky-container2 .sub-articles .variant p {
+.dalsi-clanky-container2 .sub-articles .variant .article-text h3 {
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.dalsi-clanky-container2 .sub-articles .variant .article-text p {
     font-size: 14px;
     line-height: 1.4;
 }

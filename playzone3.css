@@ -13,10 +13,17 @@ body {
 
 /* Hlavička */
 .top-header {
+    position: fixed;
     display: flex;
     background-color: #111;
+    z-index: 1000; /* Header se zobrazí nad ostatním obsahem */
     color: white;
     height: 150px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.top-header.hidden {
+    transform: translateY(-100%); /* Skryje header posunutím nahoru */
 }
 
 .logo {
@@ -163,6 +170,7 @@ body {
     width: 40px;
 }  
 
+
 /* Sekce novinek s gridem pro Zápasovník */
 .news-section {
     display: grid;
@@ -208,7 +216,7 @@ body {
 
 .news-article-main .tag {
     position: absolute;
-    top: -330px;  /* Vzdálenost od horního okraje obrázku */
+    top: -300px;  /* Vzdálenost od horního okraje obrázku */
     right: 10px;
     background-color: red;
     padding: 5px 10px;
@@ -218,15 +226,28 @@ body {
     border-radius: 3px;
 }
 
+.news-article-main .tag_cs {
+    position: absolute;
+    top: -300px;  /* Vzdálenost od horního okraje obrázku */
+    right: 10px;
+    background-color: orange;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+
 .news-article-main h3 {
-    font-size: 24px;
+    font-size: 30px;
     margin-top: 10px;
     color: #fff;
 }
 
 .news-article-main p {
-    font-size: 14px;
-    color: #ccc;
+    font-size: 16px;
+    color: #fff;
 }
 
 /* Menší články uprostřed s nezměněnými velikostmi */
@@ -267,7 +288,7 @@ body {
 
 .news-article-small-column .news-article .tag {
     position: absolute;
-    top: -120px;  /* Vzdálenost od horního okraje obrázku */
+    top: -110px;  /* Vzdálenost od horního okraje obrázku */
     right: 10px;
     font-size: 12px;
     background-color: red;
@@ -276,14 +297,26 @@ body {
     font-weight: bold;
 }
 
+.news-article-small-column .news-article .tag_cs {
+    position: absolute;
+    top: -110px;  /* Vzdálenost od horního okraje obrázku */
+    right: 10px;
+    font-size: 12px;
+    background-color: orange;
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
 .news-article-small-column .news-article h3 {
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 5px;
+    color: #fff;
 }
 
 .news-article-small-column .news-article p {
-    font-size: 12px;
-    color: #ccc;
+    font-size: 14px;
+    color: #fff;
 }
 
 /* Sekce Zápasovník v pravém sloupci */
@@ -293,7 +326,7 @@ body {
     padding: 15px;
     position: absolute;    
     left: 1420px;
-    bottom: 395px;
+    bottom: 350px;
     width: 420px;
     height: 420px;
     border-radius: 10px;
@@ -336,8 +369,9 @@ body {
     grid-template-columns: 2fr 1fr;
     background-color: #000000;
     padding: 20px;
-    margin: 25px auto;
+    margin: 200px auto;
     max-width: 1200px;
+    padding-left: 50px;
     border-radius: 8px;
 }
 
@@ -348,37 +382,52 @@ body {
     align-items: center;
     padding: 10px 0;
     */
-    margin-top: 140px;
-    font-size: 24px;
-    color: white;
-    border-left: 5px solid green;
-    padding-left: 10px;
-    margin-bottom: 20px;
-}
-
-.dalsi-clanky-header2 {
-    /*
-    display: fixed;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    */
-    margin-top: 20px;
-    font-size: 24px;
+    font-size: 28px;
     color: white;
-    border-left: 5px solid green;
-    padding-left: 10px;
-    margin-bottom: 20px;
+    margin-top: 16px;
 }
 
 .dalsi-clanky-header h2 {
-    font-size: 24px;
+    font-size: 32px;
+    color: white;
+}
+
+.one-line {
+    display: flex;
+    gap: 10px; /* Mezera mezi prvky */
+    align-items: center; /* Vertikální zarovnání prvků na střed */
+}
+
+.one-line h3, 
+.one-line h4, 
+.one-line h5 {
+    margin: 0; /* Odstraní výchozí mezery okolo nadpisů */
+}
+
+.dalsi-clanky .one-line h3 {
+    font-size: 16px;
+    color: gray;
+}
+
+.dalsi-clanky .one-line h4 {
+    font-size: 16px;
+    color: white;
+    background-color: orange;
+    border-radius: 3px;
+    padding: 3px 5px;
+}
+
+.dalsi-clanky .one-line h5 {
+    font-size: 14px;
     color: white;
 }
 
 .dalsi-clanky-header a {
-    font-size: 14px;
-    color: #007bff;
+    margin-top: 6px;
+    font-size: 16px;
+    color: grey;
     text-decoration: none;
 }
 
@@ -394,12 +443,11 @@ body {
     display: flex;
     position: relative;
     /*background-color: #333;*/
-    padding: 15px;
+    padding: 0px;
     border-radius: 8px;
-    gap: 20px;
+    gap: 15px;
 
 }
-
 .image-container img {
     width: 280px;
     border-radius: 5px;
@@ -429,24 +477,56 @@ body {
     height: 90%;
 }
 
+.article-text h4 {
+    margin-top: 15px;
+    font-size: 16px;
+    color: gray;
+    margin-bottom: -10px;
+}
+
 .article-text h3 {
-    font-size: 18px;
+    font-size: 16px;
     color: white;
-    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .article-text p {
-    font-size: 14px;
-    color: #ccc;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    line-height: 2;
     margin: 2px 0;
+    margin-bottom: 20px;
 }
-
+/*
 .schedule-section2 {
     grid-column: 2 / 3;
     flex: 1;
-   /* background-color: #333;*/
     padding: 15px;
     border-radius: 10px;
+}
+*/
+.schedule-section2 {
+    grid-column: 2 / 3;
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    height: 3600px; /* Nastavte výšku kontejneru */
+    overflow: hidden; /* Skryje obsah přesahující kontejner */
+}
+
+.sticky-container {
+    position: relative;
+    height: 3600px; 
+}
+
+.sticky-container img {
+    position: sticky;
+    top: 0; /* Obrázek se drží horní části rodičovského kontejneru */
+    width: 320px; /* Přizpůsobí se šířce rodiče */
+    height: auto; /* Zachová proporce obrázku */
 }
 
 .ad-background {
@@ -459,17 +539,50 @@ body {
     max-width: 400px;
     margin: auto;
 }
+
+.dalsi-clanky-header1_1 {
+    /*
+    display: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    */
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: white;
+    border-left: 10px solid green;
+    padding-left: 10px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+.dalsi-clanky-header1_1 a {
+    margin-top: 6px;
+    font-size: 16px;
+    color: grey;
+    text-decoration: none;
+}
+
 .header {
-    margin-top: 130px;
-    margin-bottom: -400px;
     background-color: #b982ff;
     color: white;
     padding: 15px;
     border-radius: 10px;
     display: flex;
-    align-items: center; 
+    align-items: center;
+    margin-bottom: 20px;
 }
-
+.header .icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
 .header .icon img {
     width: 100%;
     height: auto;
@@ -485,8 +598,9 @@ body {
 .tournament-list {
     list-style-type: none;  
 }
+/*
 .tournament {
-    background-color: white;
+    background-color: #222;
     height: 111px;
     border-radius: 10px;
     padding: 15px;
@@ -528,6 +642,248 @@ body {
     padding: 5px 10px;
     border-radius: 15px;
 }
+*/
+
+.tournament {
+    display: flex; /* Flexbox pro zarovnání prvků */
+    align-items: center; /* Vertikální zarovnání na střed */
+    background-color: #1e1e28; /* Tmavé pozadí */
+    padding: 15px; /* Vnitřní okraje */
+    border-radius: 10px; /* Kulaté rohy */
+    margin-bottom: 10px; /* Mezera mezi položkami */
+    color: #ffffff; /* Barva textu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Jemný stín */
+}
+
+
+.tournament .icon {
+    flex-shrink: 0; /* Zabraňuje změně velikosti ikony */
+    width: 40px; /* Šířka ikony */
+    height: 40px; /* Výška ikony */
+    background-color: #f4a10b; /* Oranžové pozadí */
+    border-radius: 5px; /* Kulaté rohy */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -70px;
+    margin-right: 15px; /* Mezery mezi ikonou a textem */
+    overflow: hidden; /* Skryje přesahující části obrázku */
+}
+
+.tournament .icon img
+{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.tournament .info {
+    flex-grow: 1;
+}
+.tournament .tittle {
+    margin: 0; /* Odstranění výchozích okrajů */
+    font-size: 15px; /* Velikost nadpisu */
+    font-weight: bold;
+    margin-left: -55px;
+    margin-top: 20px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.tournament .info p {
+    margin: 5px 0 0; /* Mezera nad odstavcem */
+    font-size: 14px; /* Velikost textu */
+    color: #b3b3b3; /* Jemná šedá barva pro datum */
+}
+
+.tournament span 
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
+}
+
+.tournament .event-game {
+    color: gray;
+}
+.tournament .status {
+    margin-top: -70px;
+    background-color: #2d2d3a; /* Tmavší pozadí */
+    color: #ffffff; /* Bílý text */
+    font-weight: bold;
+    padding: 5px 10px; /* Vnitřní okraje */
+    border-radius: 5px; /* Kulaté rohy */
+    font-size: 14px; /* Velikost textu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Zabraňuje zalomení textu */
+}
+
+.tournament2 {
+    margin-top: -18px;
+    background-color: #111;
+    display: flex; /* Flexbox pro zarovnání prvků */
+    align-items: center; /* Vertikální zarovnání na střed */
+    padding: 15px; /* Vnitřní okraje */
+    margin-bottom: 10px; /* Mezera mezi položkami */
+    color: #ffffff; /* Barva textu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Jemný stín */
+}
+
+.tournament2 .icon {
+    flex-shrink: 0; /* Zabraňuje změně velikosti ikony */
+    width: 40px; /* Šířka ikony */
+    height: 40px; /* Výška ikony */
+    background-color: #f4a10b; /* Oranžové pozadí */
+    border-radius: 5px; /* Kulaté rohy */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -70px;
+    margin-right: 15px; /* Mezery mezi ikonou a textem */
+    overflow: hidden; /* Skryje přesahující části obrázku */
+}
+
+.tournament2 .icon img
+{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.tournament2 .info {
+    flex-grow: 1;
+}
+.tournament2 .tittle {
+    margin: 0; /* Odstranění výchozích okrajů */
+    font-size: 15px; /* Velikost nadpisu */
+    font-weight: bold;
+    margin-left: -55px;
+    margin-top: 20px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.tournament2 .tittle2 {
+    margin: 0; /* Odstranění výchozích okrajů */
+    font-size: 14px; /* Velikost nadpisu */
+    margin-left: -55px;
+    color: gray;
+    margin-top: -8px;
+    margin-bottom: 15px;
+}
+.tournament2 .info p {
+    margin: 5px 0 0; /* Mezera nad odstavcem */
+    font-size: 14px; /* Velikost textu */
+    color: #b3b3b3; /* Jemná šedá barva pro datum */
+}
+
+.tournament2 span 
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
+}
+
+.tournament2 .event-game {
+    color: gray;
+}
+.tournament2 .status {
+    margin-top: -70px;
+    background-color: #2d2d3a; /* Tmavší pozadí */
+    color: #ffffff; /* Bílý text */
+    font-weight: bold;
+    padding: 5px 10px; /* Vnitřní okraje */
+    border-radius: 5px; /* Kulaté rohy */
+    font-size: 14px; /* Velikost textu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Zabraňuje zalomení textu */
+}
+
+
+.tournament3 {
+    margin-top: -18px;
+    background-color: #1e1e28; /* Tmavé pozadí */
+    display: flex; /* Flexbox pro zarovnání prvků */
+    align-items: center; /* Vertikální zarovnání na střed */
+    padding: 15px; /* Vnitřní okraje */
+    margin-bottom: 10px; /* Mezera mezi položkami */
+    color: #ffffff; /* Barva textu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Jemný stín */
+}
+
+.tournament3 .icon {
+    flex-shrink: 0; /* Zabraňuje změně velikosti ikony */
+    width: 40px; /* Šířka ikony */
+    height: 40px; /* Výška ikony */
+    background-color: #f4a10b; /* Oranžové pozadí */
+    border-radius: 5px; /* Kulaté rohy */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -70px;
+    margin-right: 15px; /* Mezery mezi ikonou a textem */
+    overflow: hidden; /* Skryje přesahující části obrázku */
+}
+
+.tournament3 .icon img
+{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.tournament3 .info {
+    flex-grow: 1;
+}
+.tournament3 .tittle {
+    margin: 0; /* Odstranění výchozích okrajů */
+    font-size: 15px; /* Velikost nadpisu */
+    font-weight: bold;
+    margin-left: -55px;
+    margin-top: 20px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.tournament3 .tittle2 {
+    margin: 0; /* Odstranění výchozích okrajů */
+    font-size: 14px; /* Velikost nadpisu */
+    margin-left: -55px;
+    color: gray;
+    margin-top: -8px;
+    margin-bottom: 15px;
+}
+.tournament3 .info p {
+    margin: 5px 0 0; /* Mezera nad odstavcem */
+    font-size: 14px; /* Velikost textu */
+    color: #b3b3b3; /* Jemná šedá barva pro datum */
+}
+
+.tournament3 span 
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
+}
+
+.tournament3 .event-game {
+    color: gray;
+}
+.tournament3 .status {
+    margin-top: -70px;
+    background-color: #2d2d3a; /* Tmavší pozadí */
+    color: #ffffff; /* Bílý text */
+    font-weight: bold;
+    padding: 5px 10px; /* Vnitřní okraje */
+    border-radius: 5px; /* Kulaté rohy */
+    font-size: 14px; /* Velikost textu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Zabraňuje zalomení textu */
+}
+
 
 .ad-image {
     text-align: center;
@@ -542,9 +898,9 @@ body {
     max-width: 1200px;
     margin: 20px auto;
     padding: 25px;
-    background-color: black;
+    background-color: #2d2d3a;
     border-radius: 8px;
-    margin-top: -35px;
+    margin-top: -210px;
     margin-bottom: -45px;
 }
 
@@ -552,11 +908,10 @@ body {
 .dalsi-clanky-container2 .dalsi-clanky-header2 h2 {
     font-size: 24px;
     color: white;
-    border-left: 5px solid red;
+    border-left: 10px solid red;
     padding-left: 10px;
     margin-bottom: 20px;
 }
-
 
 /* Main article layout */
 .dalsi-clanky-container2 .main-article {
@@ -567,6 +922,7 @@ body {
 
 .dalsi-clanky-container2 .main-article img {
     width: 40%; /* Adjust the width of the YouTube image */
+    width: 520px;
     margin-right: 20px;
     border-radius: 5px;
 }
@@ -578,63 +934,67 @@ body {
 
 .dalsi-clanky-container2 .main-article .article-text h3 {
     font-size: 20px;
+    color: white;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
+.dalsi-clanky-container2 .main-article .article-text h4 {
+    margin-top: 16px;
+    font-size: 18px;
+    color: gray;
+    margin-bottom: -10px;
+}
+
 .dalsi-clanky-container2 .main-article .article-text p {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 15px;
+    color: #fff;
+    margin: 2px 0;
+    margin-bottom: 20px;
 }
 /* Sub-articles inline */
 .dalsi-clanky-container2 .sub-articles {
     display: flex;
-    justify-content: space-between; /* Space between articles */
     gap: 20px; /* Space between items */
 }
 
 .dalsi-clanky-container2 .sub-articles .variant {
     flex: 1;
-    text-align: center;
+    text-align: left;
     color: white;
 }
 
 .dalsi-clanky-container2 .sub-articles .variant img {
     width: 100%;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: -10px;
 }
 
-.dalsi-clanky-container2 .sub-articles .variant h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    margin-top: -100px;
+.dalsi-clanky-container2 .sub-articles .variant .article-text h4 {
+    margin-top: 15px;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: -340px;
 }
 
-.dalsi-clanky-container2 .sub-articles .variant p {
+.dalsi-clanky-container2 .sub-articles .variant .article-text h3 {
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.dalsi-clanky-container2 .sub-articles .variant .article-text p {
     font-size: 14px;
     line-height: 1.4;
 }
 
-
-/*kontejner 3*/
-.dalsi-clanky-container3 {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 25px;
-    background-color: gray;
-    border-radius: 8px;
-    margin-top: -35px;
-    margin-bottom: -45px;
-}
-
-.dalsi-clanky-container3 img[src="ad3.jpg"] {
-    margin-top: 20px; /* Nastavte si požadovanou hodnotu podle potřeby */
+.dalsi-clanky-container2 img[src="ad3.jpg"] {
+    margin-top: 200px; /* Nastavte si požadovanou hodnotu podle potřeby */
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
-
 
 /*footer*/
 .footer {
@@ -761,35 +1121,79 @@ body {
     margin-top: 20px;
 }
 
-/*brawlstars*/
-.brawl-image {
-    max-width: 1160px; /* Zabrání, aby obrázek byl větší než tato hodnota */
-    margin: 0 auto; /* Vycentruje obrázek, pokud je rodič širší */
-    position: absolute; 
+/*přidané*/
+.red {
+    color: red;
 }
 
-.dalsi-clanky-container2 {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 2fr 1fr;
-    background-color: #000000;
-    padding: 20px;
-    margin: 25px auto;
-    margin-top: -80px;
-    max-width: 1200px;
-    border-radius: 8px;
+.dark {
+    color: gray;
+    margin-left: 5px;
 }
 
-.dalsi-clanky-header2 {
-    /*
-    display: fixed;
-    justify-content: space-between;
+.twitter-post {
+    width: 500px; /* Šířka obrázku */
+    height: 900px; /* Výška obrázku */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Jemný stín */
+    margin: 20px auto; /* Vertikální mezera a zarovnání na střed (pokud je v kontejneru s text-align: center) */
+    display: block; /* Umožní centrování obrázku pomocí margin */
+}
+
+/*autorova karta*/
+.author-card {
+    display: flex;
     align-items: center;
-    padding: 10px 0;
-    */
-    font-size: 24px;
+    background-color: #1e1e28;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+}
+
+.author-card img {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.author-details {
+    flex: 1;
+}
+
+.author-details h3 {
+    margin: 0 0 5px;
+    padding-left: 8px;
     color: white;
     border-left: 5px solid green;
-    padding-left: 10px;
-    margin-bottom: 20px;
+}
+
+.author-details p {
+    margin: 0;
+    color: gray;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.author-socials {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.author-socials img{
+    height: 20px;
+    width: 20px;
+    margin-bottom: 70px;
+}
+
+.author-socials a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.author-socials a:hover {
+    color: #00d8ff;
 }
