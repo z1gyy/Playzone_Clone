@@ -168,7 +168,7 @@ body {
 
 .news-article-main .tag {
     position: absolute;
-    top: -300px;  /* Vzdálenost od horního okraje obrázku */
+    top: -330px;  /* Vzdálenost od horního okraje obrázku */
     right: 10px;
     background-color: red;
     padding: 5px 10px;
@@ -179,14 +179,14 @@ body {
 }
 
 .news-article-main h3 {
-    font-size: 28px;
+    font-size: 24px;
     margin-top: 10px;
     color: #fff;
 }
 
 .news-article-main p {
-    font-size: 16px;
-    color: #fff;
+    font-size: 14px;
+    color: #ccc;
 }
 
 /* Menší články uprostřed s nezměněnými velikostmi */
@@ -227,7 +227,7 @@ body {
 
 .news-article-small-column .news-article .tag {
     position: absolute;
-    top: -110px;  /* Vzdálenost od horního okraje obrázku */
+    top: -120px;  /* Vzdálenost od horního okraje obrázku */
     right: 10px;
     font-size: 12px;
     background-color: red;
@@ -237,14 +237,13 @@ body {
 }
 
 .news-article-small-column .news-article h3 {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 5px;
-    color: #fff;
 }
 
 .news-article-small-column .news-article p {
-    font-size: 14px;
-    color: #fff;
+    font-size: 12px;
+    color: #ccc;
 }
 
 /* Sekce Zápasovník v pravém sloupci */
@@ -309,15 +308,28 @@ body {
     align-items: center;
     padding: 10px 0;
     */
-    display: flex;
-    justify-content: space-between;
-    font-size: 28px;
+    margin-top: 140px;
+    font-size: 24px;
     color: white;
-    border-left: 10px solid red;
+    border-left: 5px solid green;
     padding-left: 10px;
-    margin-top: 16px;
+    margin-bottom: 20px;
 }
 
+.dalsi-clanky-header2 {
+    /*
+    display: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    */
+    margin-top: 20px;
+    font-size: 24px;
+    color: white;
+    border-left: 5px solid green;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
 
 .dalsi-clanky-header h2 {
     font-size: 24px;
@@ -325,9 +337,8 @@ body {
 }
 
 .dalsi-clanky-header a {
-    margin-top: 6px;
-    font-size: 16px;
-    color: grey;
+    font-size: 14px;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -343,9 +354,9 @@ body {
     display: flex;
     position: relative;
     /*background-color: #333;*/
-    padding: 0px;
+    padding: 15px;
     border-radius: 8px;
-    gap: 15px;
+    gap: 20px;
 
 }
 
@@ -378,25 +389,16 @@ body {
     height: 90%;
 }
 
-.article-text h4 {
-    margin-top: 15px;
-    font-size: 16px;
-    color: gray;
-    margin-bottom: -10px;
-}
-
 .article-text h3 {
-    font-size: 16px;
+    font-size: 18px;
     color: white;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .article-text p {
     font-size: 14px;
-    color: #fff;
+    color: #ccc;
     margin: 2px 0;
-    margin-bottom: 20px;
 }
 
 .schedule-section2 {
@@ -417,50 +419,17 @@ body {
     max-width: 400px;
     margin: auto;
 }
-
-.dalsi-clanky-header1_1 {
-    /*
-    display: fixed;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    */
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    color: white;
-    border-left: 10px solid green;
-    padding-left: 10px;
-    margin-top: 16px;
-    margin-bottom: 20px;
-}
-
-.dalsi-clanky-header1_1 a {
-    margin-top: 6px;
-    font-size: 16px;
-    color: grey;
-    text-decoration: none;
-}
-
 .header {
+    margin-top: 130px;
+    margin-bottom: -400px;
     background-color: #b982ff;
     color: white;
     padding: 15px;
     border-radius: 10px;
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    align-items: center; 
 }
-.header .icon {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-}
+
 .header .icon img {
     width: 100%;
     height: auto;
@@ -476,9 +445,8 @@ body {
 .tournament-list {
     list-style-type: none;  
 }
-/*
 .tournament {
-    background-color: #222;
+    background-color: white;
     height: 111px;
     border-radius: 10px;
     padding: 15px;
@@ -520,248 +488,6 @@ body {
     padding: 5px 10px;
     border-radius: 15px;
 }
-*/
-
-.tournament {
-    display: flex; /* Flexbox pro zarovnání prvků */
-    align-items: center; /* Vertikální zarovnání na střed */
-    background-color: #1e1e28; /* Tmavé pozadí */
-    padding: 15px; /* Vnitřní okraje */
-    border-radius: 10px; /* Kulaté rohy */
-    margin-bottom: 10px; /* Mezera mezi položkami */
-    color: #ffffff; /* Barva textu */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Jemný stín */
-}
-
-
-.tournament .icon {
-    flex-shrink: 0; /* Zabraňuje změně velikosti ikony */
-    width: 40px; /* Šířka ikony */
-    height: 40px; /* Výška ikony */
-    background-color: #f4a10b; /* Oranžové pozadí */
-    border-radius: 5px; /* Kulaté rohy */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -70px;
-    margin-right: 15px; /* Mezery mezi ikonou a textem */
-    overflow: hidden; /* Skryje přesahující části obrázku */
-}
-
-.tournament .icon img
-{
-    max-width: 100%;
-    max-height: 100%;
-
-}
-
-.tournament .info {
-    flex-grow: 1;
-}
-.tournament .tittle {
-    margin: 0; /* Odstranění výchozích okrajů */
-    font-size: 15px; /* Velikost nadpisu */
-    font-weight: bold;
-    margin-left: -55px;
-    margin-top: 20px;
-    color: #ffffff;
-    margin-bottom: 15px;
-}
-.tournament .info p {
-    margin: 5px 0 0; /* Mezera nad odstavcem */
-    font-size: 14px; /* Velikost textu */
-    color: #b3b3b3; /* Jemná šedá barva pro datum */
-}
-
-.tournament span 
-{
-    font-size: 14px;
-    font-weight: bold;
-    color: gray;
-}
-
-.tournament .event-game {
-    color: gray;
-}
-.tournament .status {
-    margin-top: -70px;
-    background-color: #2d2d3a; /* Tmavší pozadí */
-    color: #ffffff; /* Bílý text */
-    font-weight: bold;
-    padding: 5px 10px; /* Vnitřní okraje */
-    border-radius: 5px; /* Kulaté rohy */
-    font-size: 14px; /* Velikost textu */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap; /* Zabraňuje zalomení textu */
-}
-
-.tournament2 {
-    margin-top: -18px;
-    background-color: #111;
-    display: flex; /* Flexbox pro zarovnání prvků */
-    align-items: center; /* Vertikální zarovnání na střed */
-    padding: 15px; /* Vnitřní okraje */
-    margin-bottom: 10px; /* Mezera mezi položkami */
-    color: #ffffff; /* Barva textu */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Jemný stín */
-}
-
-.tournament2 .icon {
-    flex-shrink: 0; /* Zabraňuje změně velikosti ikony */
-    width: 40px; /* Šířka ikony */
-    height: 40px; /* Výška ikony */
-    background-color: #f4a10b; /* Oranžové pozadí */
-    border-radius: 5px; /* Kulaté rohy */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -70px;
-    margin-right: 15px; /* Mezery mezi ikonou a textem */
-    overflow: hidden; /* Skryje přesahující části obrázku */
-}
-
-.tournament2 .icon img
-{
-    max-width: 100%;
-    max-height: 100%;
-
-}
-
-.tournament2 .info {
-    flex-grow: 1;
-}
-.tournament2 .tittle {
-    margin: 0; /* Odstranění výchozích okrajů */
-    font-size: 15px; /* Velikost nadpisu */
-    font-weight: bold;
-    margin-left: -55px;
-    margin-top: 20px;
-    color: #ffffff;
-    margin-bottom: 15px;
-}
-.tournament2 .tittle2 {
-    margin: 0; /* Odstranění výchozích okrajů */
-    font-size: 14px; /* Velikost nadpisu */
-    margin-left: -55px;
-    color: gray;
-    margin-top: -8px;
-    margin-bottom: 15px;
-}
-.tournament2 .info p {
-    margin: 5px 0 0; /* Mezera nad odstavcem */
-    font-size: 14px; /* Velikost textu */
-    color: #b3b3b3; /* Jemná šedá barva pro datum */
-}
-
-.tournament2 span 
-{
-    font-size: 14px;
-    font-weight: bold;
-    color: gray;
-}
-
-.tournament2 .event-game {
-    color: gray;
-}
-.tournament2 .status {
-    margin-top: -70px;
-    background-color: #2d2d3a; /* Tmavší pozadí */
-    color: #ffffff; /* Bílý text */
-    font-weight: bold;
-    padding: 5px 10px; /* Vnitřní okraje */
-    border-radius: 5px; /* Kulaté rohy */
-    font-size: 14px; /* Velikost textu */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap; /* Zabraňuje zalomení textu */
-}
-
-
-.tournament3 {
-    margin-top: -18px;
-    background-color: #1e1e28; /* Tmavé pozadí */
-    display: flex; /* Flexbox pro zarovnání prvků */
-    align-items: center; /* Vertikální zarovnání na střed */
-    padding: 15px; /* Vnitřní okraje */
-    margin-bottom: 10px; /* Mezera mezi položkami */
-    color: #ffffff; /* Barva textu */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Jemný stín */
-}
-
-.tournament3 .icon {
-    flex-shrink: 0; /* Zabraňuje změně velikosti ikony */
-    width: 40px; /* Šířka ikony */
-    height: 40px; /* Výška ikony */
-    background-color: #f4a10b; /* Oranžové pozadí */
-    border-radius: 5px; /* Kulaté rohy */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -70px;
-    margin-right: 15px; /* Mezery mezi ikonou a textem */
-    overflow: hidden; /* Skryje přesahující části obrázku */
-}
-
-.tournament3 .icon img
-{
-    max-width: 100%;
-    max-height: 100%;
-
-}
-
-.tournament3 .info {
-    flex-grow: 1;
-}
-.tournament3 .tittle {
-    margin: 0; /* Odstranění výchozích okrajů */
-    font-size: 15px; /* Velikost nadpisu */
-    font-weight: bold;
-    margin-left: -55px;
-    margin-top: 20px;
-    color: #ffffff;
-    margin-bottom: 15px;
-}
-.tournament3 .tittle2 {
-    margin: 0; /* Odstranění výchozích okrajů */
-    font-size: 14px; /* Velikost nadpisu */
-    margin-left: -55px;
-    color: gray;
-    margin-top: -8px;
-    margin-bottom: 15px;
-}
-.tournament3 .info p {
-    margin: 5px 0 0; /* Mezera nad odstavcem */
-    font-size: 14px; /* Velikost textu */
-    color: #b3b3b3; /* Jemná šedá barva pro datum */
-}
-
-.tournament3 span 
-{
-    font-size: 14px;
-    font-weight: bold;
-    color: gray;
-}
-
-.tournament3 .event-game {
-    color: gray;
-}
-.tournament3 .status {
-    margin-top: -70px;
-    background-color: #2d2d3a; /* Tmavší pozadí */
-    color: #ffffff; /* Bílý text */
-    font-weight: bold;
-    padding: 5px 10px; /* Vnitřní okraje */
-    border-radius: 5px; /* Kulaté rohy */
-    font-size: 14px; /* Velikost textu */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap; /* Zabraňuje zalomení textu */
-}
-
 
 .ad-image {
     text-align: center;
@@ -776,7 +502,7 @@ body {
     max-width: 1200px;
     margin: 20px auto;
     padding: 25px;
-    background-color: #333;
+    background-color: black;
     border-radius: 8px;
     margin-top: -35px;
     margin-bottom: -45px;
@@ -848,12 +574,26 @@ body {
     line-height: 1.4;
 }
 
-.dalsi-clanky-container2 img[src="ad3.jpg"] {
-    margin-top: 200px; /* Nastavte si požadovanou hodnotu podle potřeby */
+
+/*kontejner 3*/
+.dalsi-clanky-container3 {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: gray;
+    border-radius: 8px;
+    margin-top: -35px;
+    margin-bottom: -45px;
+}
+
+.dalsi-clanky-container3 img[src="ad3.jpg"] {
+    margin-top: 20px; /* Nastavte si požadovanou hodnotu podle potřeby */
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+
+
 
 /*footer*/
 .footer {
@@ -978,4 +718,37 @@ body {
     font-size: 12px;
     color: #777;
     margin-top: 20px;
+}
+
+/*brawlstars*/
+.brawl-image {
+    max-width: 1160px; /* Zabrání, aby obrázek byl větší než tato hodnota */
+    margin: 0 auto; /* Vycentruje obrázek, pokud je rodič širší */
+    position: absolute; 
+}
+
+.dalsi-clanky-container2 {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 2fr 1fr;
+    background-color: #000000;
+    padding: 20px;
+    margin: 25px auto;
+    margin-top: -80px;
+    max-width: 1200px;
+    border-radius: 8px;
+}
+
+.dalsi-clanky-header2 {
+    /*
+    display: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    */
+    font-size: 24px;
+    color: white;
+    border-left: 5px solid green;
+    padding-left: 10px;
+    margin-bottom: 20px;
 }
