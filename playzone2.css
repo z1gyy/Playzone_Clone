@@ -348,12 +348,13 @@ body {
     align-items: center;
     padding: 10px 0;
     */
-    margin-top: 140px;
-    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 28px;
     color: white;
-    border-left: 5px solid green;
+    border-left: 10px solid red;
     padding-left: 10px;
-    margin-bottom: 20px;
+    margin-top: 150px;
 }
 
 .dalsi-clanky-header2 {
@@ -363,12 +364,36 @@ body {
     align-items: center;
     padding: 10px 0;
     */
-    margin-top: 20px;
-    font-size: 24px;
+    display: flex;
+    margin-top: 150px;
+    justify-content: space-between;
     color: white;
-    border-left: 5px solid green;
+    border-left: 10px solid green;
     padding-left: 10px;
     margin-bottom: 20px;
+}
+
+.dalsi-clanky-header2_1 {
+    /*
+    display: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    */
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    color: white;
+    border-left: 10px solid green;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.dalsi-clanky-header2 a {
+    margin-top: 6px;
+    font-size: 16px;
+    color: grey;
+    text-decoration: none;
 }
 
 .dalsi-clanky-header h2 {
@@ -377,8 +402,9 @@ body {
 }
 
 .dalsi-clanky-header a {
-    font-size: 14px;
-    color: #007bff;
+    margin-top: 6px;
+    font-size: 16px;
+    color: grey;
     text-decoration: none;
 }
 
@@ -387,14 +413,15 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .article {
     display: flex;
     position: relative;
     /*background-color: #333;*/
-    padding: 15px;
+    padding-left: 15px;
+
     border-radius: 8px;
     gap: 20px;
 
@@ -429,18 +456,30 @@ body {
     height: 90%;
 }
 
-.article-text h3 {
+
+.article-text h4 {
+    font-weight: bold;
     font-size: 18px;
+    color: #fff;
+    line-height: 1.4;
+    margin: 2px 0;
+    margin-bottom: 20px;
+}
+
+.article-text h3 {
+    font-size: 16px;
     color: white;
-    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .article-text p {
-    font-size: 14px;
-    color: #ccc;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.4;
     margin: 2px 0;
+    margin-bottom: 20px;
 }
-
 .schedule-section2 {
     grid-column: 2 / 3;
     flex: 1;
@@ -486,48 +525,80 @@ body {
     list-style-type: none;  
 }
 .tournament {
-    background-color: white;
-    height: 111px;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
+    display: flex; /* Flexbox pro zarovnání prvků */
+    align-items: center; /* Vertikální zarovnání na střed */
+    background-color: #1e1e28; /* Tmavé pozadí */
+    padding: 15px; /* Vnitřní okraje */
+    border-radius: 10px; /* Kulaté rohy */
+    margin-bottom: 10px; /* Mezera mezi položkami */
+    color: #ffffff; /* Barva textu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Jemný stín */
 }
+
+
 .tournament .icon {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    overflow: hidden;
+    flex-shrink: 0; /* Zabraňuje změně velikosti ikony */
+    width: 40px; /* Šířka ikony */
+    height: 40px; /* Výška ikony */
+    background-color: #f4a10b; /* Oranžové pozadí */
+    border-radius: 5px; /* Kulaté rohy */
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-right: 15px;
+    align-items: center;
+    margin-top: -70px;
+    margin-right: 15px; /* Mezery mezi ikonou a textem */
+    overflow: hidden; /* Skryje přesahující části obrázku */
 }
-.tournament .icon img {
-    width: 100%;
-    height: auto;
+
+.tournament .icon img
+{
+    max-width: 100%;
+    max-height: 100%;
+
 }
+
 .tournament .info {
     flex-grow: 1;
 }
-.tournament .info h4 {
-    font-size: 1em;
-    margin-bottom: 5px;
-    color: #333;
+.tournament .tittle {
+    margin: 0; /* Odstranění výchozích okrajů */
+    font-size: 15px; /* Velikost nadpisu */
+    font-weight: bold;
+    margin-left: -55px;
+    margin-top: 20px;
+    color: #ffffff;
+    margin-bottom: 15px;
 }
 .tournament .info p {
-    font-size: 0.85em;
-    color: #777;
+    margin: 5px 0 0; /* Mezera nad odstavcem */
+    font-size: 14px; /* Velikost textu */
+    color: #b3b3b3; /* Jemná šedá barva pro datum */
+}
+
+.tournament span 
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
+}
+
+.tournament .event-game {
+    color: gray;
 }
 .tournament .status {
-    font-size: 0.85em;
-    color: white;
-    background-color: #333;
-    padding: 5px 10px;
-    border-radius: 15px;
+    margin-top: -70px;
+    background-color: #2d2d3a; /* Tmavší pozadí */
+    color: #ffffff; /* Bílý text */
+    font-weight: bold;
+    padding: 5px 10px; /* Vnitřní okraje */
+    border-radius: 5px; /* Kulaté rohy */
+    font-size: 14px; /* Velikost textu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Zabraňuje zalomení textu */
 }
+
 
 .ad-image {
     text-align: center;
@@ -549,70 +620,13 @@ body {
 }
 
 /* Header styling */
-.dalsi-clanky-container2 .dalsi-clanky-header2 h2 {
-    font-size: 24px;
+.dalsi-clanky2 .dalsi-clanky-header2 {
+    font-size: 16px;
     color: white;
     border-left: 5px solid red;
     padding-left: 10px;
     margin-bottom: 20px;
-}
-
-
-/* Main article layout */
-.dalsi-clanky-container2 .main-article {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.dalsi-clanky-container2 .main-article img {
-    width: 40%; /* Adjust the width of the YouTube image */
-    margin-right: 20px;
-    border-radius: 5px;
-}
-
-.dalsi-clanky-container2 .main-article .article-text {
-    flex-grow: 1;
-    color: white;
-}
-
-.dalsi-clanky-container2 .main-article .article-text h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.dalsi-clanky-container2 .main-article .article-text p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-/* Sub-articles inline */
-.dalsi-clanky-container2 .sub-articles {
-    display: flex;
-    justify-content: space-between; /* Space between articles */
-    gap: 20px; /* Space between items */
-}
-
-.dalsi-clanky-container2 .sub-articles .variant {
-    flex: 1;
-    text-align: center;
-    color: white;
-}
-
-.dalsi-clanky-container2 .sub-articles .variant img {
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.dalsi-clanky-container2 .sub-articles .variant h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    margin-top: -100px;
-}
-
-.dalsi-clanky-container2 .sub-articles .variant p {
-    font-size: 14px;
-    line-height: 1.4;
+    margin-top: 10px;
 }
 
 
@@ -763,9 +777,37 @@ body {
 
 /*brawlstars*/
 .brawl-image {
-    max-width: 1160px; /* Zabrání, aby obrázek byl větší než tato hodnota */
-    margin: 0 auto; /* Vycentruje obrázek, pokud je rodič širší */
-    position: absolute; 
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.brawl-image img {
+    position: absolute;
+    width: 1160px;
+    margin-left: -355px;
+    display: block;
+    height: auto;
+}
+
+#brawl_icon {
+    position: absolute;
+    width: 50px;
+    margin-top: 38px;
+    margin-left: 100px;
+    border-radius: 8px;
+}
+.brawl-image .text {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 230px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .dalsi-clanky-container2 {
@@ -780,16 +822,71 @@ body {
     border-radius: 8px;
 }
 
-.dalsi-clanky-header2 {
-    /*
-    display: fixed;
-    justify-content: space-between;
+/*karty*/
+.card {
+    display: flex;
     align-items: center;
-    padding: 10px 0;
-    */
-    font-size: 24px;
+    background-color: #1e2630;
     color: white;
-    border-left: 5px solid green;
-    padding-left: 10px;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+.card .content {
+    display: flex;
+    flex-direction: column;
+}
+.card .content .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+.card .content .subtitle {
+    font-size: 14px;
+    color: #b0b3b8;
+    margin: 0;
+}
+
+.cards-container {
+    display: flex; /* Flexbox pro zobrazení vedle sebe */
+    gap: 20px; /* Mezera mezi kartami */
+    justify-content: center; /* Vycentrování karet */
+    align-items: center; /* Vertikální zarovnání */
+    margin-left: -65px;
+}
+
+.card2 {
+    display: flex;
+    align-items: center;
+    background-color: #1e2630;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    width: 210px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.card2 img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+.card2 .content {
+    display: flex;
+    flex-direction: column;
+}
+.card2 .content .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+.card2 .content .subtitle {
+    font-size: 14px;
+    color: #b0b3b8;
+    margin: 0;
 }

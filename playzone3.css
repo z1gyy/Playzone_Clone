@@ -517,10 +517,21 @@ body {
     overflow: hidden; /* Skryje obsah přesahující kontejner */
 }
 
+.schedule-section3 {
+    grid-column: 2 / 3;
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    height: 1800px; /* Nastavte výšku kontejneru */
+    overflow: hidden; /* Skryje obsah přesahující kontejner */
+}
+
 .sticky-container {
     position: relative;
     height: 3600px; 
 }
+
 
 .sticky-container img {
     position: sticky;

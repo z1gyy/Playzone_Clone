@@ -1062,3 +1062,14 @@ body {
     color: #777;
     margin-top: 20px;
 }
+
+.article-link {
+    text-decoration: none; /* Odstraní podtržení odkazu */
+    color: #3498db; /* Nastaví barvu textu odkazu */
+    font-weight: bold; /* Zvýrazní text tučně */
+}
+.article-link:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
