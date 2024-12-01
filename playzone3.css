@@ -1208,3 +1208,177 @@ body {
 .author-socials a:hover {
     color: #00d8ff;
 }
+
+/*Gallery*/
+.gallery-container {
+    width: 1000px;
+    max-width: 100%;
+    overflow: hidden; 
+    position: relative;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.gallery-thumbnails-slider {
+    display: flex;
+    flex-direction: column; /* Nastaví obrázky do sloupce */
+    overflow-y: scroll; /* Zajistí, že posuvník bude vždy viditelný */
+    height: 500px; /* Nastaví výšku kontejneru pro posouvání */
+    scrollbar-width: thin; /* Úzký posuvník pro Firefox */
+    gap: 10px;
+    padding-right: 10px; /* Vytvoří prostor pro posuvník */
+}
+/* Skrýt vertikální posuvník */
+.gallery-thumbnails-slider::-webkit-scrollbar {
+    width: 8px; /* Šířka vertikálního posuvníku */
+}
+
+.gallery-thumbnails-slider::-webkit-scrollbar-thumb {
+    background: #ccc; /* Barva posuvníku */
+    border-radius: 4px;
+}
+
+
+.gallery-container h4{
+    font-size: 28px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+/* Náhledy obrázků */
+.gallery-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.thumbnail {
+    width: 100%; /* Šířka obrázku na celou šířku kontejneru */
+    height: 150px; /* Pevná výška obrázků */
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Ukazatel při hoveru */
+    transition: transform 0.2s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* Zobrazení obrázku */
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.viewer.hidden {
+    display: none;
+}
+
+.viewer img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/*Formualar*/
+.formular-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 20px;
+}
+
+.formular-container h4{
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.formular {
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #1c1c1c; /* Tmavé pozadí pro formulář */
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #ffffff; /* Bílé labely */
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #555; /* Tmavě šedý rámeček pro inputy */
+    border-radius: 4px;
+    background-color: #333; /* Tmavé pozadí pro inputy */
+    color: #fff; /* Bílé písmo uvnitř inputů */
+    font-size: 14px;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.submit-btn {
+    padding: 12px 20px;
+    background-color: #4CAF50; /* Zelené tlačítko */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #4CAF50; /* Zelená pro zaškrtnutí */
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}

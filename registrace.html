@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playzone Klon</title>
+    <link rel="stylesheet" href="playzone3.css">
+</head>
+<body>
+    <!-- Hlavička -->
+    <header class="top-header">
+        <div class="logo">
+            <img src="logo.svg" alt="Playzone Logo">
+        </div>
+
+        <div class="header-content">
+            <div class="nav-row">
+                <nav class="main-nav">
+                    <a href="#">Články</a>
+                    <a href="#">Turnaje</a>
+                    <a href="#">Zápasovník</a>
+                    <a href="#">Naše Projekty</a>
+                    <a href="#">Tipsport CS</a>
+                </nav>
+                <div class="auth-buttons">
+                    <button class="login-btn">Přihlášení</button>
+                    <button class="register-btn">Registrace</button>
+                </div>
+            </div>
+            <div class="games-nav">
+                <div class="image-container_top">
+                    <a href="brawlstars.html">
+                        <img src="brawl.svg" alt="Brawl Stars">
+                    </a>
+                </div>
+                <div class="image-container_top">
+                    <img src="cs2.svg" alt="Counter-Strike 2">
+                </div>
+                <div class="image-container_top">
+                    <img src="deadlock.svg" alt="Deadlock">
+                </div>
+                <div class="image-container_top">
+                    <img src="fc.svg" alt="FIFA">
+                </div>
+                <div class="image-container_top">
+                    <img src="fortnite.svg" alt="Fortnite">
+                </div>
+                <div class="image-container_top">
+                    <img src="lol.svg" alt="League of Legends">
+                </div>
+                <div class="image-container_top">
+                    <img src="pubg.svg" alt="PUBG">
+                </div>
+                <div class="image-container_top">
+                    <img src="tft.svg" alt="Teamfight Tactics">
+                </div>
+                <div class="image-container_top">
+                    <img src="valorant.svg" alt="Valorant">
+                </div>
+                <div class="image-container_top_sipka">
+                    <img src="Sipka.jpg" alt="Sipka">
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Sekce Další články -->
+    <div class="ad-background">
+        <div class="dalsi-clanky-container">
+            <div class="formular-container">
+                <h4>Registrace</h4>
+                <div class="formular">
+                    <form action="#" method="POST" class="registration-form">
+                        <!-- Jméno -->
+                        <div class="form-group">
+                            <label for="full-name">Celé jméno</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="Vaše celé jméno" required>
+                        </div>
+            
+                        <!-- E-mail -->
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Vaše e-mailová adresa" required>
+                        </div>
+            
+                        <!-- Heslo -->
+                        <div class="form-group">
+                            <label for="password">Heslo</label>
+                            <input type="password" id="password" name="password" placeholder="Vytvořte heslo" required minlength="8">
+                        </div>
+            
+                        <!-- Potvrzení hesla -->
+                        <div class="form-group">
+                            <label for="confirm-password">Potvrďte heslo</label>
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Potvrďte heslo" required>
+                        </div>
+            
+                        <!-- Adresa -->
+                        <div class="form-group">
+                            <label for="address">Adresa</label>
+                            <input type="text" id="address" name="address" placeholder="Vaše adresa" required>
+                        </div>
+            
+                        <!-- Telefonní číslo -->
+                        <div class="form-group">
+                            <label for="phone">Telefonní číslo</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Vaše telefonní číslo" required pattern="^\d{9}$">
+                        </div>
+            
+                        <!-- Pohlaví -->
+                        <div class="form-group">
+                            <label for="gender">Pohlaví</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Vyberte pohlaví</option>
+                                <option value="male">Muž</option>
+                                <option value="female">Žena</option>
+                                <option value="other">Ostatní</option>
+                            </select>
+                        </div>
+            
+                        <!-- Datum narození -->
+                        <div class="form-group">
+                            <label for="dob">Datum narození</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+            
+                        <!-- Souhlas s podmínkami -->
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="terms" required>
+                                Souhlasím s podmínkami
+                            </label>
+                        </div>
+            
+                        <!-- Odeslat tlačítko -->
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn">Registrovat</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="dalsi-clanky-container2">
+            <!-- Nadpis sekce -->
+        
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="top-section">
+            <div class="logo2">
+                <img src="logo.svg" alt="logo2">
+            </div>
+            
+            <!-- First Section -->
+            <div class="links">
+                <div>
+                    <p>Provozovatelem portálu je PLAYzone s.r.o.</p>
+                    <a href="#">Přehled a nastavení cookies</a><br>
+                    <a href="#">Ochrana osobních údajů</a><br>
+                    <a href="#">Podmínky užití portálu</a><br>
+                    <a href="#">Loga ke stažení</a><br>
+                    <a href="#">Kontaktní formulář</a>
+                </div>
+            </div>
+            <div class="rozcestnik">
+                <a href="#">Články</a><br>
+                <a href="#">Turnaje</a><br>
+                <a href="#">Zápasovník</a><br>
+                <a href="#">Videa</a>
+                <a href="#">Kontakty</a>
+            </div>
+        </div>
+        
+        <!-- Separator -->
+        <div class="separator"></div>
+        
+        <!-- Second Section -->
+        <div class="bottom-section">
+            <div class="projects">
+                <h4>Naše další projekty</h4>
+                <div class="project-links">
+                    <a href="#">dev1s.com</a>
+                    <a href="#">herniatrakce.cz</a>
+                    <a href="#">playzonearena.cz</a>
+                    <a href="#">mcr.gg</a>
+                    <a href="#">playzone.agency</a>
+                    <a href="#">pzchallenge.cz</a>
+                    <a href="#">shop.playzone.cz</a>
+                    <a href="#">zivestreamy.cz</a>
+                </div>
+            </div>
+            
+            <div class="socials">
+                <h4>Zůstaňte s námi ve spojení</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook.png" alt="facebook"></a>
+                    <a href="#"><img src="instagram.png" alt="instagram"></a>
+                    <a href="#"><img src="twitter.png" alt="twitter"></a>
+                    <a href="#"><img src="youtube.png" alt="youtube2"></a>
+                    <a href="#"><img src="twtitch.png" alt="twtitch"></a>
+                    <a href="#"><img src="tiktok.png" alt="tiktok"></a>
+                    <a href="#"><img src="kitkat.png" alt="kitkat"></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2009-2024 PLAYzone.cz | Vytvořilo PLEGIS s.r.o.
+        </div>
+    </div>
+</body>
+</html>
