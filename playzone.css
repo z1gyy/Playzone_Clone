@@ -134,15 +134,23 @@ nav .dynamic {
 .auth-buttons {
     display: flex;
     gap: 10px;
-    margin-left: 740px;
+    margin-left: 600px;
+}
+.auth-buttons img{
+    margin-top: 5px;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
 }
 
 .login-btn, .register-btn {
     padding: 8px 15px;
+    height: 40px;
+    width: 120px;
     border: none;
     cursor: pointer;
     font-size: 14px;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .login-btn {
