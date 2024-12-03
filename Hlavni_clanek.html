@@ -34,6 +34,8 @@
                     <a href="#" class="orange">TIPSPORT CS</a>
                 </nav>
                 <div class="auth-buttons">
+                    <img src="lupa.png" alt="Lupa">
+                    <img src="mesic.png" alt="Mesic">
                     <button class="login-btn">Přihlášení</button>
                     <a href="registrace.html"><button class="register-btn">Registrace</button></a>
                 </div>
@@ -76,8 +78,6 @@
     </header>
     
     <!-- Sekce Další články -->
-<!-- Sekce Další články -->
-    <!-- Další články Section -->
     <div class="ad-background">
         <div class="dalsi-clanky-container">
             <div class="cesta">
@@ -229,7 +229,7 @@
         <!-- First Section -->
             <div class="links">
                 <div>
-                    <p>Provozovatelem portálu je PLAYzone s.r.o.</p>
+                    <a href="#">Provozovatelem portálu je PLAYzone s.r.o.</a><br>
                     <a href="#">Přehled a nastavení cookies</a><br>
                     <a href="#">Ochrana osobních údajů</a><br>
                     <a href="#">Podmínky užití portálu</a><br>
@@ -238,11 +238,11 @@
                 </div>
             </div>
             <div class="rozcestnik">
-                <a href="#">Články</a><br>
-                <a href="#">Turnaje</a><br>
-                <a href="#">Zápasovník</a><br>
-                <a href="#">Videa</a>
-                <a href="#">Kontakty</a>
+                <a href="#">ČLÁNKY</a><br>
+                <a href="#">TURNAJE</a><br>
+                <a href="#">ZÁPASOVNÍK</a><br>
+                <a href="#">VIDEA</a>
+                <a href="#">KONTAKTY</a>
             </div>
         </div>
         
@@ -262,6 +262,7 @@
                     <a href="#">pzchallenge.cz</a>
                     <a href="#">shop.playzone.cz</a>
                     <a href="#">zivestreamy.cz</a>
+                    <a href="#" class="dot">...</a>
                 </div>
             </div>
             
@@ -278,9 +279,13 @@
                 </div>
             </div>
         </div>
-        
+        <div class="end">
         <div class="copyright">
-            © 2009-2024 PLAYzone.cz | Vytvořilo PLEGIS s.r.o.
+            © 2009-2024 PLAYzone.cz 
+        </div>
+        <div class="copyright2"> 
+            Vytvořilo PLEGIS s.r.o.
+        </div>
         </div>
     </div>
     
@@ -291,15 +296,14 @@ document.addEventListener("scroll", () => {
     const img = section.querySelector("img");
     const rect = section.getBoundingClientRect();
 
-    // Pokud je horní část kontejneru nad vrcholem obrazovky, posouvej obrázek
     if (rect.top < 0 && rect.bottom > window.innerHeight) {
-        img.style.position = "fixed"; // Obrázek se stane pevně pozicovaným
-        img.style.top = "0"; // Zarovnaný k vrchu obrazovky
+        img.style.position = "fixed";
+        img.style.top = "0"; 
     } else if (rect.bottom <= window.innerHeight) {
-        img.style.position = "absolute"; // Vrátí se zpět do kontejneru
-        img.style.top = `${rect.height - img.offsetHeight}px`; // Zarovná ke spodní části
+        img.style.position = "absolute"; 
+        img.style.top = `${rect.height - img.offsetHeight}px`; 
     } else {
-        img.style.position = "absolute"; // Vrátí se na své místo
+        img.style.position = "absolute"; 
         img.style.top = "0";
     }
 });
@@ -312,10 +316,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentScrollPosition = window.scrollY;
 
         if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 100) {
-            // Pokud uživatel scrolluje dolů a překročil určitou hranici
             header.classList.add("hidden");
         } else {
-            // Pokud uživatel scrolluje nahoru
             header.classList.remove("hidden");
         }
 

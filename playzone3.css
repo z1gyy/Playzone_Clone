@@ -141,15 +141,23 @@ nav .dynamic {
 .auth-buttons {
     display: flex;
     gap: 10px;
-    margin-left: 740px;
+    margin-left: 600px;
+}
+.auth-buttons img{
+    margin-top: 5px;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
 }
 
 .login-btn, .register-btn {
     padding: 8px 15px;
+    height: 40px;
+    width: 120px;
     border: none;
     cursor: pointer;
     font-size: 14px;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .login-btn {
@@ -180,15 +188,15 @@ nav .dynamic {
 }
 
 .games-nav a {
-    display: inline-block; /* Ujistěte se, že odkazy obklopí obrázek */ /* Nastaví mezeru mezi obrázky */
+    display: inline-block; 
     text-decoration: none; /* Skryje podtržení */
 }
 .games-nav img {
     max-height: 40px;
     transition: transform 0.3s;
     display: block; /* Zajistí správné zobrazení obrázků */
-    width: 100px; /* Nastavte požadovanou šířku */
-    height: auto; /* Zachovejte poměry stran obrázku */
+    width: 100px;
+    height: auto; 
 }
 
 .games-nav img:hover {
@@ -200,8 +208,8 @@ nav .dynamic {
     width: 158px;
     height: 70px;
     display: inline-block; /* Zajistí, že velikost kontejneru se přizpůsobí obsahu */
-    border-radius: 8px; /* Zakulatí rohy kontejneru, volitelné */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Přidá jemný stín, volitelné */
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     margin-left: 10px;
     margin-top: 8px;
 }
@@ -218,8 +226,8 @@ nav .dynamic {
     width: 60px;
     height: 70px;
     display: inline-block; /* Zajistí, že velikost kontejneru se přizpůsobí obsahu */
-    border-radius: 8px; /* Zakulatí rohy kontejneru, volitelné */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Přidá jemný stín, volitelné */
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     margin-left: 10px;
     margin-top: 8px;
 }
@@ -319,8 +327,8 @@ nav .dynamic {
 
 .news-article-small-column .news-article {
     position: relative;
-    height: 200px; /* Zachování původní výšky */
-    width: 430px;  /* Zachování původní šířky */
+    height: 200px; 
+    width: 430px; 
     background-color: #222;
     border-radius: 10px;
     overflow: hidden;
@@ -513,7 +521,7 @@ nav .dynamic {
 }
 
 .image-container {
-    position: relative; /* Přidáno pro relativní pozicování tagu uvnitř obrázku */
+    position: relative; 
 }
 
 .tag {
@@ -572,7 +580,7 @@ nav .dynamic {
     padding: 15px;
     border-radius: 10px;
     position: relative;
-    height: 3600px; /* Nastavte výšku kontejneru */
+    height: 3600px; 
     overflow: hidden; /* Skryje obsah přesahující kontejner */
 }
 
@@ -582,7 +590,7 @@ nav .dynamic {
     padding: 15px;
     border-radius: 10px;
     position: relative;
-    height: 1800px; /* Nastavte výšku kontejneru */
+    height: 1800px; 
     overflow: hidden; /* Skryje obsah přesahující kontejner */
 }
 
@@ -991,7 +999,7 @@ nav .dynamic {
 }
 
 .dalsi-clanky-container2 .main-article img {
-    width: 40%; /* Adjust the width of the YouTube image */
+    width: 40%; 
     width: 520px;
     margin-right: 20px;
     border-radius: 5px;
@@ -1018,6 +1026,7 @@ nav .dynamic {
 
 .dalsi-clanky-container2 .main-article .article-text p {
     font-size: 15px;
+    line-height: 1;
     color: #fff;
     margin: 2px 0;
     margin-bottom: 20px;
@@ -1060,7 +1069,7 @@ nav .dynamic {
 }
 
 .dalsi-clanky-container2 img[src="ad3.jpg"] {
-    margin-top: 200px; /* Nastavte si požadovanou hodnotu podle potřeby */
+    margin-top: 200px; 
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -1083,7 +1092,7 @@ nav .dynamic {
 
 .logo2 {
     text-align: left;
-    margin-right: 20px; /* Vytvoříme mezery mezi obrázkem a odkazy */
+    margin-right: 20px; 
 }
 
 .logo2 img {
@@ -1100,9 +1109,11 @@ nav .dynamic {
 }
 
 .links a {
+    margin-bottom: -4px;
+    display: block;
     color: #ccc;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .links a:hover {
@@ -1113,6 +1124,7 @@ nav .dynamic {
     display: flex; /* Použijeme flexbox pro rozložení odkazů vedle sebe */
     justify-content: flex-end; /* Odkazy budou zarovnány doprava */
     gap: 15px; /* Mezera mezi odkazy */
+    color: #fff;
     margin-left: 300px;
 }
 
@@ -1128,7 +1140,7 @@ nav .dynamic {
 
 .separator {
     height: 3px;
-    background-color: #e63946; /* Red color */
+    background-color: #e63946;
     margin: 20px 0;
 }
 
@@ -1145,11 +1157,29 @@ nav .dynamic {
     min-width: 200px;
 }
 
+.project-links {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 5px; 
+}
+
 .project-links a {
-    display: block;
+    margin-right: 15px;
+    text-align: left; /* Zarovná text uvnitř odkazu na střed */
+    padding: 5px 0px; /* Přidá trochu prostoru kolem textu */
+    text-decoration: none; /* Odstraní podtržení */
+    font-size: 13px;
     color: #ccc;
-    text-decoration: none;
-    margin: 5px 0;
+}
+
+.project-links a.dot{
+    margin-right: 15px;
+    margin-top: -25px;
+    text-align: left; /* Zarovná text uvnitř odkazu na střed */
+    padding: 5px 0px; /* Přidá trochu prostoru kolem textu */
+    text-decoration: none; /* Odstraní podtržení */
+    font-size: 40px;
+    color: #ccc;
 }
 
 .project-links a:hover {
@@ -1184,11 +1214,16 @@ nav .dynamic {
     color: #fff;
 }
 
-.copyright {
-    text-align: center;
+.end {
+    display: flex; /* Nastaví prvky vedle sebe na jeden řádek */
+    justify-content: space-between; /* Rozloží obsah mezi začátek a konec */
+    align-items: center; /* Vertikální zarovnání prvků na střed */
+    padding: 10px; 
+}
+
+.copyright, .copyright2 {
+    margin: 0; /* Odstraní případné nežádoucí mezery */
     font-size: 12px;
-    color: #777;
-    margin-top: 20px;
 }
 
 /*přidané*/
@@ -1303,6 +1338,54 @@ nav .dynamic {
     margin-bottom: 20px;
     align-items: center;
 }
+
+/* Styl karuselu */
+.gallery-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.carousel-image {
+    width: 80%; /* Šířka karuselu */
+    max-width: 600px; /* Maximální šířka */
+    height: auto; /* Zachová poměr stran */
+    text-align: center;
+}
+
+.carousel-image img {
+    width: 100%; /* Obrázek zaplní karusel */
+    border-radius: 10px; /* Kulaté rohy (volitelné) */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Stín */
+}
+
+/* Styl thumbnail slideru */
+.gallery-thumbnails-slider {
+    overflow-x: auto; /* Posuvník pro horizontální obsah */
+    white-space: nowrap; /* Udržení obsahu v jedné řadě */
+    padding: 10px;
+}
+
+.gallery-thumbnails {
+    display: inline-flex;
+    gap: 10px; /* Mezery mezi obrázky */
+}
+
+.thumbnail2 {
+    width: 80px; /* Velikost miniatury */
+    height: 80px;
+    object-fit: cover; /* Vyplní plochu miniatury */
+    cursor: pointer;
+    border-radius: 5px; /* Kulaté rohy */
+    border: 2px solid transparent; /* Výchozí ohraničení */
+    transition: border 0.3s ease; /* Animace při najetí */
+}
+
+.thumbnail2:hover {
+    border: 2px solid #007bff; /* Ohraničení při hover */
+}
+
 
 /* Náhledy obrázků */
 .gallery-thumbnails {
@@ -1440,4 +1523,18 @@ input[type="checkbox"]:checked {
 
 .submit-btn:hover {
     background-color: #45a049;
+}
+
+/*odpočet*/
+#countdown {
+    font-size: 24px;
+    font-weight: bold;
+    color: orange;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#countdown span {
+    color: orange;
+    margin: 0 5px;
 }

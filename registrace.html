@@ -16,15 +16,28 @@
         <div class="header-content">
             <div class="nav-row">
                 <nav class="main-nav">
-                    <a href="#">Články</a>
-                    <a href="#">Turnaje</a>
-                    <a href="#">Zápasovník</a>
-                    <a href="#">Naše Projekty</a>
-                    <a href="#">Tipsport CS</a>
+                    <a href="#">ČLÁNKY</a>
+                    <a href="#">TURNAJE</a>
+                    <a href="#">ZÁPASOVNÍK</a>
+                    <nav class="dynamic">
+                        <ul class="menu">
+                            <li class="dropdown">
+                                <a href="#">NAŠE PROJEKTY  &#9660;</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Projekt 1</a></li>
+                                    <li><a href="#">Projekt 2</a></li>
+                                    <li><a href="Fotogalerie.html">Fotogalerie</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="orange">TIPSPORT CS</a>
                 </nav>
                 <div class="auth-buttons">
+                    <img src="lupa.png" alt="Lupa">
+                    <img src="mesic.png" alt="Mesic">
                     <button class="login-btn">Přihlášení</button>
-                    <button class="register-btn">Registrace</button>
+                    <a href="registrace.html"><button class="register-btn">Registrace</button></a>
                 </div>
             </div>
             <div class="games-nav">
@@ -142,21 +155,27 @@
         </div>
 
         <div class="dalsi-clanky-container2">
-            <!-- Nadpis sekce -->
+            <h2>Odpočet do nového roku</h2>
+            <div id="countdown">
+                <span id="days">0</span> dní 
+                <span id="hours">0</span> hodin 
+                <span id="minutes">0</span> minut 
+                <span id="seconds">0</span> sekund
+            </div>
         
         </div>
     </div>
     
     <div class="footer">
         <div class="top-section">
-            <div class="logo2">
-                <img src="logo.svg" alt="logo2">
-            </div>
-            
-            <!-- First Section -->
+        <div class="logo2">
+            <img src="logo.svg" alt="logo2">
+        </div>
+        
+        <!-- First Section -->
             <div class="links">
                 <div>
-                    <p>Provozovatelem portálu je PLAYzone s.r.o.</p>
+                    <a href="#">Provozovatelem portálu je PLAYzone s.r.o.</a><br>
                     <a href="#">Přehled a nastavení cookies</a><br>
                     <a href="#">Ochrana osobních údajů</a><br>
                     <a href="#">Podmínky užití portálu</a><br>
@@ -165,11 +184,11 @@
                 </div>
             </div>
             <div class="rozcestnik">
-                <a href="#">Články</a><br>
-                <a href="#">Turnaje</a><br>
-                <a href="#">Zápasovník</a><br>
-                <a href="#">Videa</a>
-                <a href="#">Kontakty</a>
+                <a href="#">ČLÁNKY</a><br>
+                <a href="#">TURNAJE</a><br>
+                <a href="#">ZÁPASOVNÍK</a><br>
+                <a href="#">VIDEA</a>
+                <a href="#">KONTAKTY</a>
             </div>
         </div>
         
@@ -189,26 +208,69 @@
                     <a href="#">pzchallenge.cz</a>
                     <a href="#">shop.playzone.cz</a>
                     <a href="#">zivestreamy.cz</a>
+                    <a href="#" class="dot">...</a>
                 </div>
             </div>
             
             <div class="socials">
                 <h4>Zůstaňte s námi ve spojení</h4>
                 <div class="social-icons">
-                    <a href="#"><img src="facebook.png" alt="facebook"></a>
-                    <a href="#"><img src="instagram.png" alt="instagram"></a>
+                    <a href="#"><img src="facebook.png" alt="facebook"></a> 
+                    <a href="#"><img src="instagram.png" alt="instagram"></a> 
                     <a href="#"><img src="twitter.png" alt="twitter"></a>
                     <a href="#"><img src="youtube.png" alt="youtube2"></a>
-                    <a href="#"><img src="twtitch.png" alt="twtitch"></a>
-                    <a href="#"><img src="tiktok.png" alt="tiktok"></a>
-                    <a href="#"><img src="kitkat.png" alt="kitkat"></a>
+                    <a href="#"><img src="twtitch.png" alt="twtitch"></a> 
+                    <a href="#"><img src="tiktok.png" alt="tiktok"></a> 
+                    <a href="#"><img src="kitkat.png" alt="kitkat"></a> 
                 </div>
             </div>
         </div>
-        
+        <div class="end">
         <div class="copyright">
-            © 2009-2024 PLAYzone.cz | Vytvořilo PLEGIS s.r.o.
+            © 2009-2024 PLAYzone.cz 
+        </div>
+        <div class="copyright2"> 
+            Vytvořilo PLEGIS s.r.o.
+        </div>
         </div>
     </div>
 </body>
+<script>
+    document.querySelector(".registration-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Registrace byla úspěšná!"); 
+    });
+
+    function startCountdown() {
+    const newYear = new Date('January 1, 2025 00:00:00').getTime();
+    const countdownElement = document.getElementById('countdown');
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeLeft = newYear - now;
+
+        if (timeLeft <= 0) {
+            countdownElement.innerHTML = "Šťastný nový rok!";
+            clearInterval(interval);
+            return;
+        }
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById('days').innerText = days;
+        document.getElementById('hours').innerText = hours;
+        document.getElementById('minutes').innerText = minutes;
+        document.getElementById('seconds').innerText = seconds;
+    }
+
+    const interval = setInterval(updateCountdown, 1000); 
+    updateCountdown(); 
+}
+
+document.addEventListener('DOMContentLoaded', startCountdown);
+
+</script>
 </html>

@@ -134,15 +134,23 @@ nav .dynamic {
 .auth-buttons {
     display: flex;
     gap: 10px;
-    margin-left: 740px;
+    margin-left: 600px;
+}
+.auth-buttons img{
+    margin-top: 5px;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
 }
 
 .login-btn, .register-btn {
     padding: 8px 15px;
+    height: 40px;
+    width: 120px;
     border: none;
     cursor: pointer;
     font-size: 14px;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .login-btn {
@@ -173,15 +181,15 @@ nav .dynamic {
 }
 
 .games-nav a {
-    display: inline-block; /* Ujistěte se, že odkazy obklopí obrázek */ /* Nastaví mezeru mezi obrázky */
+    display: inline-block;
     text-decoration: none; /* Skryje podtržení */
 }
 .games-nav img {
     max-height: 40px;
     transition: transform 0.3s;
     display: block; /* Zajistí správné zobrazení obrázků */
-    width: 100px; /* Nastavte požadovanou šířku */
-    height: auto; /* Zachovejte poměry stran obrázku */
+    width: 100px;
+    height: auto; 
 }
 
 .games-nav img:hover {
@@ -301,8 +309,8 @@ nav .dynamic {
 
 .news-article-small-column .news-article {
     position: relative;
-    height: 200px; /* Zachování původní výšky */
-    width: 430px;  /* Zachování původní šířky */
+    height: 200px;
+    width: 430px;  
     background-color: #222;
     border-radius: 10px;
     overflow: hidden;
@@ -495,7 +503,7 @@ nav .dynamic {
 }
 
 .image-container {
-    position: relative; /* Přidáno pro relativní pozicování tagu uvnitř obrázku */
+    position: relative; 
 }
 
 .tag {
@@ -503,6 +511,18 @@ nav .dynamic {
     top: 10px; /* Posunutí od horního okraje obrázku */
     right: 10px; /* Posunutí od pravého okraje obrázku */
     background-color: rgba(0, 0, 0, 0.7); /* Poloprůhledné pozadí pro lepší čitelnost */
+    color: #fff; /* Bílá barva textu */
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tag_brawl {
+    position: absolute; /* Absolutní pozicování pro umístění na obrázek */
+    top: 10px; /* Posunutí od horního okraje obrázku */
+    right: 10px; /* Posunutí od pravého okraje obrázku */
+    background-color: red; /* Poloprůhledné pozadí pro lepší čitelnost */
     color: #fff; /* Bílá barva textu */
     padding: 5px 10px;
     border-radius: 3px;
@@ -521,8 +541,9 @@ nav .dynamic {
 .article-text h4 {
     margin-top: 15px;
     font-size: 16px;
-    color: gray;
-    margin-bottom: -10px;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 .article-text h3 {
@@ -537,6 +558,7 @@ nav .dynamic {
     color: #fff;
     margin: 2px 0;
     margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 .article-text p {
@@ -627,8 +649,8 @@ nav .dynamic {
     flex-grow: 1;
 }
 .tournament .tittle {
-    margin: 0; /* Odstranění výchozích okrajů */
-    font-size: 15px; /* Velikost nadpisu */
+    margin: 0; 
+    font-size: 15px; 
     font-weight: bold;
     margin-left: -55px;
     margin-top: 20px;
@@ -701,14 +723,14 @@ nav .dynamic {
     max-width: 1200px;
     margin: 20px auto;
     padding: 25px;
-    background-color: gray;
+    background-color: #1e1e28;
     border-radius: 8px;
     margin-top: -35px;
     margin-bottom: -45px;
 }
 
 .dalsi-clanky-container3 img[src="ad3.jpg"] {
-    margin-top: 20px; /* Nastavte si požadovanou hodnotu podle potřeby */
+    margin-top: 20px; 
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -733,7 +755,7 @@ nav .dynamic {
 
 .logo2 {
     text-align: left;
-    margin-right: 20px; /* Vytvoříme mezery mezi obrázkem a odkazy */
+    margin-right: 20px;
 }
 
 .logo2 img {
@@ -750,9 +772,11 @@ nav .dynamic {
 }
 
 .links a {
+    margin-bottom: -4px;
+    display: block;
     color: #ccc;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .links a:hover {
@@ -763,6 +787,7 @@ nav .dynamic {
     display: flex; /* Použijeme flexbox pro rozložení odkazů vedle sebe */
     justify-content: flex-end; /* Odkazy budou zarovnány doprava */
     gap: 15px; /* Mezera mezi odkazy */
+    color: #fff;
     margin-left: 300px;
 }
 
@@ -795,11 +820,29 @@ nav .dynamic {
     min-width: 200px;
 }
 
+.project-links {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 5px; 
+}
+
 .project-links a {
-    display: block;
+    margin-right: 15px;
+    text-align: left; /* Zarovná text uvnitř odkazu na střed */
+    padding: 5px 0px; /* Přidá trochu prostoru kolem textu */
+    text-decoration: none; /* Odstraní podtržení */
+    font-size: 13px;
     color: #ccc;
-    text-decoration: none;
-    margin: 5px 0;
+}
+
+.project-links a.dot{
+    margin-right: 15px;
+    margin-top: -25px;
+    text-align: left; /* Zarovná text uvnitř odkazu na střed */
+    padding: 5px 0px; /* Přidá trochu prostoru kolem textu */
+    text-decoration: none; /* Odstraní podtržení */
+    font-size: 40px;
+    color: #ccc;
 }
 
 .project-links a:hover {
@@ -834,11 +877,16 @@ nav .dynamic {
     color: #fff;
 }
 
-.copyright {
-    text-align: center;
-    font-size: 12px;
-    color: #777;
-    margin-top: 20px;
+.end {
+    display: flex; 
+    justify-content: space-between; /* Rozloží obsah mezi začátek a konec */
+    align-items: center; /* Vertikální zarovnání prvků na střed */
+    padding: 10px; 
+}
+
+.copyright, .copyright2 {
+    margin: 0; /* Odstraní případné nežádoucí mezery */
+    font-size: 12px; 
 }
 
 /*brawlstars*/
